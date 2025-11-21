@@ -1,0 +1,166 @@
+---
+title: "Pemodelan Stokastik"
+author: "Sofyan Fauzi Dzaki Arif"
+date: "2025-10-27"
+output: html_document
+---
+
+```{r}
+library(readr)
+data <- read_csv("C:/Users/Hype/Downloads/waktu tunggu perpustakaan - Sheet1.csv")
+View(data)
+```
+
+```{r}
+# Plot untuk Arrival Rate per Hour
+ggplot(arrival_rate_per_hour, aes(x = Hour, y = arrival_rate)) +
+  geom_line() +
+  labs(title = "Arrival Rate per Hour",
+       x = "Hour",
+       y = "Arrival Rate (per minute)") +
+  theme_minimal()
+
+# Plot untuk Utilisasi (P)
+ggplot(arrival_rate_per_hour, aes(x = Hour, y = P)) +
+  geom_line() +
+  labs(title = "Utilization (P) per Hour",
+       x = "Hour",
+       y = "Utilization (P %)") +
+  theme_minimal()
+
+# Plot untuk Lq (Jumlah Pengunjung dalam Antrian)
+ggplot(arrival_rate_per_hour, aes(x = Hour, y = Lq)) +
+  geom_line() +
+  labs(title = "Average Number of Visitors in Queue (Lq)",
+       x = "Hour",
+       y = "Number of Visitors in Queue (Lq)") +
+  theme_minimal()
+
+# Plot untuk Wq (Waktu Tunggu dalam Antrian)
+ggplot(arrival_rate_per_hour, aes(x = Hour, y = Wq)) +
+  geom_line() +
+  labs(title = "Average Wait Time in Queue (Wq)",
+       x = "Hour",
+       y = "Wait Time in Queue (Wq) [hours]") +
+  theme_minimal()
+
+# Plot untuk Ls (Jumlah Pengunjung dalam Sistem)
+ggplot(arrival_rate_per_hour, aes(x = Hour, y = Ls)) +
+  geom_line() +
+  labs(title = "Average Number of Visitors in System (Ls)",
+       x = "Hour",
+       y = "Number of Visitors in System (Ls)") +
+  theme_minimal()
+
+# Plot untuk Ws (Waktu dalam Sistem)
+ggplot(arrival_rate_per_hour, aes(x = Hour, y = Ws)) +
+  geom_line() +
+  labs(title = "Average Time in System (Ws)",
+       x = "Hour",
+       y = "Time in System (Ws) [hours]") +
+  theme_minimal()
+
+
+```
+
+```{r}
+library(dplyr)
+library(lubridate)
+library(ggplot2)
+
+# ======================
+# 1. Preprocessing
+# ======================
+
+data$Timestamp <- as.POSIXct(data$Timestamp,
+                             format = "%m/%d/%Y %H:%M:%S")
+
+data$Hour <- floor_date(data$Timestamp, unit = "hour")
+
+# ======================
+# 2. Hitung arrival rate per jam (λ per jam)
+# ======================
+
+arrival_rate_per_hour <- data %>%
+  group_by(Hour) %>%
+  summarise(arrival_rate = n(), .groups = "drop")
+
+service_rate <- 12   # μ
+
+# ======================
+# 3. Hitung metrik M/M/1 per jam per hari
+# ======================
+
+arrival_rate_per_hour <- arrival_rate_per_hour %>%
+  mutate(
+    P  = arrival_rate / service_rate,
+    Lq = ifelse(arrival_rate < service_rate,
+                (arrival_rate^2) / (service_rate * (service_rate - arrival_rate)),
+                NA_real_),
+    Wq = ifelse(arrival_rate < service_rate,
+                arrival_rate / (service_rate * (service_rate - arrival_rate)),
+                NA_real_),
+    Ls = ifelse(arrival_rate < service_rate,
+                arrival_rate / (service_rate - arrival_rate),
+                NA_real_),
+    Ws = ifelse(arrival_rate < service_rate,
+                1 / (service_rate - arrival_rate),
+                NA_real_)
+  )
+
+print(arrival_rate_per_hour)
+
+# ======================
+# 4. Hitung rata-rata per jam (gabungan banyak hari)
+# ======================
+
+avg_by_hour <- arrival_rate_per_hour %>%
+  mutate(HourOfDay = format(Hour, "%H:%M")) %>%
+  group_by(HourOfDay) %>%
+  summarise(mean_arrival_rate = mean(arrival_rate),
+            .groups = "drop") %>%
+  mutate(
+    P  = mean_arrival_rate / service_rate,
+    Lq = ifelse(mean_arrival_rate < service_rate,
+                (mean_arrival_rate^2) / (service_rate * (service_rate - mean_arrival_rate)),
+                NA_real_),
+    Wq = ifelse(mean_arrival_rate < service_rate,
+                mean_arrival_rate / (service_rate * (service_rate - mean_arrival_rate)),
+                NA_real_),
+    Ls = ifelse(mean_arrival_rate < service_rate,
+                mean_arrival_rate / (service_rate - mean_arrival_rate),
+                NA_real_),
+    Ws = ifelse(mean_arrival_rate < service_rate,
+                1 / (service_rate - mean_arrival_rate),
+                NA_real_)
+  )
+
+print(avg_by_hour)
+
+# ======================
+# 5. Plot Arrival Rate Per Hari
+# ======================
+
+ggplot(arrival_rate_per_hour, aes(x = Hour, y = arrival_rate)) +
+  geom_line() +
+  labs(
+    title = "Arrival Rate per Jam",
+    x = "Jam",
+    y = "Jumlah Kedatangan per Jam"
+  ) +
+  theme_minimal()
+
+# ======================
+# 6. Plot Rata-rata Arrival Rate per Jam (gabungan hari)
+# ======================
+
+ggplot(avg_by_hour, aes(x = HourOfDay, y = mean_arrival_rate, group = 1)) +
+  geom_line() +
+  labs(
+    title = "Rata-rata Arrival Rate per Jam (Gabungan Banyak Hari)",
+    x = "Jam",
+    y = "Rata-rata Kedatangan per Jam"
+  ) +
+  theme_minimal()
+
+```
