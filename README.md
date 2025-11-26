@@ -12,10 +12,10 @@
 
 | Nama | NIM | GitHub |
 |------|-----|--------|
-| <a href="https://github.com/asdoyi" target="_blank"><img src="https://github.com/asdoyi.png" width="20" style="border-radius:50%;" /></a> Asa Doa Uyi | 122450005 | [@asdoyi](https://github.com/asdoyi) |
-| <a href="https://github.com/febiyajomy28" target="_blank"><img src="https://github.com/febiyajomy28.png" width="20" style="border-radius:50%;" /></a> Febiya Jomy Pratiwi | 122450074 | [@febiyajomy28](https://github.com/febiyajomy28) |
-| <a href="https://github.com/mine2710" target="_blank"><img src="https://github.com/mine2710.png" width="20" style="border-radius:50%;" /></a> Sofyan Fauzi Dzaki Arif | 122450116 | [@mine2710](https://github.com/mine2710) |
-| <a href="https://github.com/zeeyachan" target="_blank"><img src="https://github.com/zeeyachan.png" width="20" style="border-radius:50%;" /></a> Nabila Zakiyah Zahra | 122450139 | [@zeeyachan](https://github.com/zeeyachan) |
+| <a href="https://github.com/asdoyi" target="_blank"><img src="https://github.com/asdoyi.png" width="20" style="border-radius:50%;" /></a> Asa Doa Uyi | 122450005 | 
+| <a href="https://github.com/febiyajomy28" target="_blank"><img src="https://github.com/febiyajomy28.png" width="20" style="border-radius:50%;" /></a> Febiya Jomy Pratiwi | 122450074 | 
+| <a href="https://github.com/mine2710" target="_blank"><img src="https://github.com/mine2710.png" width="20" style="border-radius:50%;" /></a> Sofyan Fauzi Dzaki Arif | 122450116 | 
+| <a href="https://github.com/zeeyachan" target="_blank"><img src="https://github.com/zeeyachan.png" width="20" style="border-radius:50%;" /></a> Nabila Zakiyah Zahra | 122450139 |
 
 
 **Dosen Pengampu:**
@@ -40,7 +40,6 @@
 - [Visualisasi Data](#-visualisasi-data)
 - [Kesimpulan](#-kesimpulan)
 - [Referensi](#-referensi)
-- [Lisensi](#-lisensi)
 
 ---
 
@@ -216,7 +215,6 @@ Catatan administrasi perpustakaan meliputi:
 ┃ ┣ 📊 utilization_plot.png
 ┃ ┗ 📊 queue_metrics_plot.png
 ┣ 📄 README.md
-┣ 📄 LICENSE
 ┗ 📄 .gitignore
 ```
 
