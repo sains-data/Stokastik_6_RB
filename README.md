@@ -117,47 +117,6 @@ Catatan administrasi perpustakaan meliputi:
 - **Ls**: Jumlah rata-rata pengunjung dalam sistem
 - **Ws**: Total waktu rata-rata dalam sistem
 
-### 🔄 Diagram Alir Penelitian
-
-```
-┌─────────────────────┐
-│  Pengumpulan Data   │
-│  (Observasi &       │
-│   Dokumentasi)      │
-└──────────┬──────────┘
-           │
-           ▼
-┌─────────────────────┐
-│  Preprocessing      │
-│  Data Timestamp     │
-└──────────┬──────────┘
-           │
-           ▼
-┌─────────────────────┐
-│  Perhitungan        │
-│  Arrival Rate (λ)   │
-└──────────┬──────────┘
-           │
-           ▼
-┌─────────────────────┐
-│  Analisis Model     │
-│  M/M/1              │
-│  (P, Lq, Wq, Ls, Ws)│
-└──────────┬──────────┘
-           │
-           ▼
-┌─────────────────────┐
-│  Visualisasi &      │
-│  Interpretasi       │
-└──────────┬──────────┘
-           │
-           ▼
-┌─────────────────────┐
-│  Kesimpulan &       │
-│  Rekomendasi        │
-└─────────────────────┘
-```
-
 ---
 
 ## 📈 Hasil Penelitian
@@ -306,19 +265,21 @@ ggplot(arrival_rate_per_hour, aes(x = Hour, y = arrival_rate)) +
 
 ### Grafik Arrival Rate per Jam
 
-![Arrival Rate](https://via.placeholder.com/800x400/4A90E2/FFFFFF?text=Arrival+Rate+Per+Jam)
+<img width="1400" height="865" alt="image" src="https://github.com/user-attachments/assets/eb154041-cbb4-499c-8e27-b56fd2be6bb4" />
+
 
 *Menunjukkan pola kedatangan pengunjung dengan puncak di jam 13:00-14:00*
 
 ### Grafik Utilization (P)
 
-![Utilization](https://via.placeholder.com/800x400/E74C3C/FFFFFF?text=Utilization+Rate)
+<img width="1400" height="865" alt="image" src="https://github.com/user-attachments/assets/103bfb54-4d05-4e01-94d4-94ec270fc58c" />
 
 *Tingkat pemanfaatan tertinggi 75% pada jam 13:00-14:00*
 
 ### Grafik Queue Length (Lq)
 
-![Queue Length](https://via.placeholder.com/800x400/F39C12/FFFFFF?text=Queue+Length)
+<img width="1400" height="865" alt="image" src="https://github.com/user-attachments/assets/b67d18d3-e2cd-455b-9827-ce382a35e767" />
+
 
 *Panjang antrian maksimal 2.25 orang pada jam sibuk*
 
