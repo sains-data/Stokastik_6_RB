@@ -10,8 +10,8 @@
 
 ## 👥 Tim Peneliti - Kelompok 6 (Kelas RB)
 
-| Nama | NIM | GitHub |
-|------|-----|--------|
+| Nama | NIM |
+|------|-----|
 | <a href="https://github.com/asdoyi" target="_blank"><img src="https://github.com/asdoyi.png" width="20" style="border-radius:50%;" /></a> Asa Doa Uyi | 122450005 | 
 | <a href="https://github.com/febiyajomy28" target="_blank"><img src="https://github.com/febiyajomy28.png" width="20" style="border-radius:50%;" /></a> Febiya Jomy Pratiwi | 122450074 | 
 | <a href="https://github.com/mine2710" target="_blank"><img src="https://github.com/mine2710.png" width="20" style="border-radius:50%;" /></a> Sofyan Fauzi Dzaki Arif | 122450116 | 
