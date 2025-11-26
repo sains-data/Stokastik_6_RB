@@ -31,6 +31,7 @@
 ## 📋 Daftar Isi
 
 - [Tentang Proyek](#-tentang-proyek)
+- [Video Penjelasan](#-video-penjelasan)
 - [Latar Belakang](#-latar-belakang)
 - [Metode Penelitian](#-metode-penelitian)
 - [Hasil Penelitian](#-hasil-penelitian)
@@ -49,6 +50,12 @@ Penelitian ini menganalisis kinerja sistem antrian pada layanan peminjaman Tugas
 
 ### 🔑 Kata Kunci
 `Sistem Antrian` · `Model M/M/1` · `Perpustakaan` · `Teori Antrian` · `Optimasi Layanan`
+
+---
+
+## 🎥 Video Penjelasan
+
+[![Video Penjelasan](https://img.youtube.com/vi/QszSsrRNc8A/maxresdefault.jpg)](https://www.youtube.com/watch?v=QszSsrRNc8A)
 
 ---
 
