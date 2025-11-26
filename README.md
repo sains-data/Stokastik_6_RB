@@ -3,7 +3,6 @@
 [![Institute](https://img.shields.io/badge/Institut-Teknologi_Sumatera-blue)](https://itera.ac.id/)
 [![Course](https://img.shields.io/badge/Mata_Kuliah-Pemodelan_Stokastik-green)](https://github.com)
 [![Model](https://img.shields.io/badge/Model-M%2FM%2F1-orange)](https://github.com)
-[![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
 
 > Analisis kinerja sistem antrian pada layanan peminjaman Tugas Akhir menggunakan Model M/M/1
 
@@ -11,12 +10,13 @@
 
 ## 👥 Tim Peneliti - Kelompok 6 (Kelas RB)
 
-| Nama | NIM |
-|------|-----|
-| Asa Doa Uyi | 122450005 |
-| Febiya Jomy Pratiwi | 122450074 |
-| Sofyan Fauzi Dzaki Arif | 122450116 |
-| Nabila Zakiyah Zahra | 122450139 |
+| Nama | NIM | GitHub |
+|------|-----|--------|
+| <img src="https://github.com/asdoyi.png" width="20" style="border-radius:50%;" /> Asa Doa Uyi | 122450005 | [@asdoyi](https://github.com/asdoyi) |
+| <img src="https://github.com/febiyajomy28.png" width="20" style="border-radius:50%;" /> Febiya Jomy Pratiwi | 122450074 | [@febiyajomy28](https://github.com/febiyajomy28) |
+| <img src="https://github.com/mine2710.png" width="20" style="border-radius:50%;" /> Sofyan Fauzi Dzaki Arif | 122450116 | [@mine2710](https://github.com/mine2710) |
+| <img src="https://github.com/zeeyachan.png" width="20" style="border-radius:50%;" /> Nabila Zakiyah Zahra | 122450139 | [@zeeyachan](https://github.com/zeeyachan) |
+
 
 **Dosen Pengampu:**
 - Mika Alvionita S, M.Si
