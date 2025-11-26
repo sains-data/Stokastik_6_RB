@@ -265,21 +265,19 @@ ggplot(arrival_rate_per_hour, aes(x = Hour, y = arrival_rate)) +
 
 ### Grafik Arrival Rate per Jam
 
-<img width="1400" height="865" alt="image" src="https://github.com/user-attachments/assets/eb154041-cbb4-499c-8e27-b56fd2be6bb4" />
-
+<img src="arrival.jpg" width="700" />
 
 *Menunjukkan pola kedatangan pengunjung dengan puncak di jam 13:00-14:00*
 
 ### Grafik Utilization (P)
 
-<img width="1400" height="865" alt="image" src="https://github.com/user-attachments/assets/103bfb54-4d05-4e01-94d4-94ec270fc58c" />
+<img src="p.jpg" width="700" />
 
 *Tingkat pemanfaatan tertinggi 75% pada jam 13:00-14:00*
 
 ### Grafik Queue Length (Lq)
 
-<img width="1400" height="865" alt="image" src="https://github.com/user-attachments/assets/b67d18d3-e2cd-455b-9827-ce382a35e767" />
-
+<img src="lq.jpg" width="700" />
 
 *Panjang antrian maksimal 2.25 orang pada jam sibuk*
 
